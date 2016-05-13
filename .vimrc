@@ -1,3 +1,7 @@
+set number
+highlight Pmenu ctermbg=4
+highlight PmenuSel ctermbg=1
+highlight PMenuSbar ctermbg=4
 set runtimepath+=~/.vim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
