@@ -1,4 +1,8 @@
 set number
+set tabstop=4
+set autoindent
+set expandtab
+set shiftwidth=4
 highlight Pmenu ctermbg=4
 highlight PmenuSel ctermbg=1
 highlight PMenuSbar ctermbg=4
@@ -26,3 +30,15 @@ augroup GO
 	autocmd!
 	autocmd BufWritePre *.go Fmt
 augroup END
+
+:set encoding=utf-8
+:set fileencodings=utf-8
+
+" Perltidy
+function! s:Perltidy()
+    %! perltidy -q
+endfunction
+autocmd BufWritePre *.pl silent :call s:Perltidy() 
+autocmd BufWritePre *.pm silent :call s:Perltidy()
+autocmd BufWritePre *.t silent :call s:Perltidy()
+
