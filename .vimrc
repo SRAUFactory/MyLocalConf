@@ -35,10 +35,10 @@ augroup END
 :set fileencodings=utf-8
 
 " Perltidy
-"function! s:Perltidy()
-"    %! perltidy -q
-"endfunction
-"autocmd BufWritePre *.pl silent :call s:Perltidy() 
-"autocmd BufWritePre *.pm silent :call s:Perltidy()
-"autocmd BufWritePre *.t silent :call s:Perltidy()
+function! s:Perltidy()
+    %! perltidy -q
+endfunction
+autocmd BufWritePre *.pl silent :call s:Perltidy() 
+autocmd BufWritePre *.pm silent :call s:Perltidy()
+autocmd BufWritePre *.t silent :call s:Perltidy()
 
